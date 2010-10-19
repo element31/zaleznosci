@@ -1,0 +1,14 @@
+class MessagesController < ApplicationController
+	def index
+	end
+
+	def new
+		@message = Topic.find(params[:topic_id]).message.new
+	end
+
+	def create
+		topic = Topic.find(params[:topic_id])
+		topic.message.create(params[:message])
+		redirect_to :topics
+	end
+end

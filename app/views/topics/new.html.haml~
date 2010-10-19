@@ -1,0 +1,6 @@
+%h2 Nowy temat
+- form_for :topic, @topic do |f|
+  %p= f.label :title, "Tytul"
+  %p= f.text_field :title
+  %p= f.text_area :content
+  %p= f.submit "Utworz"

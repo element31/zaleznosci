@@ -1,0 +1,10 @@
+%h1 Tematy
+%br
+%table
+  - @topics.each do |topic|
+    %tr
+      %td
+        %p= topic.title 
+      %td
+        %p= link_to "Pokaz", topic
+%p= link_to "Nowy temat", new_topic_path

@@ -1,0 +1,5 @@
+%h2 Nowa wiadomosc
+- form_for :message, @message, :url => { :action => "create" } do |f|
+  %p= f.label :content, "Tresc"
+  %p= f.text_area :content
+  %p= f.submit "Utworz"

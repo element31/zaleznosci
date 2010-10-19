@@ -1,0 +1,7 @@
+%h1= @topic.title
+%p= @topic.content
+
+- @topic.message.each do |msg|
+  %p= msg.content
+
+%p= link_to "Nowa wiadomosc", new_topic_message_path(@topic)
